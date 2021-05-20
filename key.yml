@@ -1,0 +1,16 @@
+- name: create activation keys
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: "Create client activation key"
+    redhat.satellite.activation_key:
+      username: "admin"
+      password: "ansible123"
+      server_url: "https://student2-sat.wtome.rhtelco.io"
+      name: "Clients"
+      organization: "Default Organization"
+      lifecycle_environment: "Library"
+      content_view: 'client content view'
+      auto_attach: False
+      release_version: 7Server
+      service_level: Premium

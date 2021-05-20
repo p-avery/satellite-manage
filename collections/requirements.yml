@@ -1,4 +1,4 @@
 ---
 collections:
-- theforeman.foreman
-- redhatinsights.insights
+- redhat.satellite
+- redhat.insights
